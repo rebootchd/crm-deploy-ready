@@ -1,0 +1,33 @@
+/* make admin sidebar a bit narrower and push main content right */
+#header, #user-tools, #site-name {
+  /* keep header styling */
+}
+
+/* Sidebar width */
+#nav-sidebar, .app-list, .module {
+  width: 220px !important;       /* reduce if you want narrower */
+  min-width: 220px !important;
+  box-sizing: border-box;
+}
+
+/* Push main content to the right */
+#content, #content-main {
+  margin-left: 240px !important; /* should be slightly larger than sidebar width */
+  width: calc(100% - 260px) !important;
+}
+
+/* Adjust breadcrumbs and page header spacing */
+.breadcrumb, .content h1, .module h2 {
+  margin-left: 0 !important;
+}
+
+/* Improve form column width */
+#content-main .form-row, .inline-related {
+  max-width: 100% !important;
+}
+
+/* Small responsive tweak for narrow screens */
+@media (max-width: 900px) {
+  #nav-sidebar, .app-list { width: 170px !important; }
+  #content, #content-main { margin-left: 180px !important; width: calc(100% - 200px) !important; }
+}
