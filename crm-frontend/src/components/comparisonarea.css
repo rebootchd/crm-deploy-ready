@@ -1,0 +1,14 @@
+/* comparison area tooltip + small styles */
+.ca-tooltip{
+  background: linear-gradient(180deg,#0f1220, #131423);
+  color: #e6eaf2;
+  padding: 8px 10px;
+  border-radius: 10px;
+  box-shadow: 0 12px 34px rgba(2,6,23,0.6);
+  border: 1px solid rgba(255,255,255,0.03);
+  min-width: 120px;
+  font-size: 13px;
+}
+.ca-tip-month{ font-weight:700; color:#fff; margin-bottom:6px; }
+.ca-tip-val{ color:#7c3aed; font-weight:700; margin-bottom:4px; display:flex; justify-content:space-between; }
+.ca-tip-val.muted{ color:#9aa3b2; font-weight:600; }

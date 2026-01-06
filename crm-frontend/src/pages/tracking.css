@@ -1,0 +1,339 @@
+/* Modern SaaS — compact & professional */
+/* INSTANT FIX — force all text inside tracking page to dark */
+.ms-root,
+.ms-root * {
+  color: #0f172a !important;
+}
+
+
+:root{
+  --bg:#bfdbfe;   /* darker light blue */
+  --card:#ffffff;
+  --muted:#4b5563;
+  --accent:#2563eb;
+  --accent-2:#7c3aed;
+}
+
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  background:var(--bg);
+  color:#0f172a;
+}
+
+/* shell */
+.ms-root{
+  padding:18px 14px;
+  background:var(--bg);     /* ensure tracking page bhi light blue ho */
+  min-height:100vh;
+}
+.ms-shell{max-width:1200px;margin:0 auto}
+
+/* header */
+.ms-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.ms-brand{display:flex;gap:12px;align-items:center}
+.ms-logo{
+  width:44px;
+  height:44px;
+  border-radius:8px;
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-weight:700;
+}
+.ms-title{font-weight:700;font-size:16px}
+.ms-sub{font-size:12px;color:var(--muted)}
+.ms-controls{display:flex;align-items:center;gap:12px}
+.ms-filter{display:flex;gap:8px}
+.ms-select{
+  padding:8px 10px;
+  border-radius:8px;
+  border:1px solid #e0e7ff;
+  background:#fff;
+  font-size:13px;
+}
+.ms-select.small{padding:6px 8px}
+.ms-actions{display:flex;gap:8px}
+.btn{
+  padding:8px 12px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+  font-size:13px
+}
+.btn-ghost{
+  background:#ffffff;
+  border:1px solid #dbeafe;    /* light blue border */
+}
+.btn-primary{
+  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+  color:#fff;
+  border:none;
+}
+
+/* KPIs */
+.ms-kpis{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:12px;
+  margin-bottom:12px
+}
+.kpi{
+  background:var(--card);
+  padding:14px;
+  border-radius:10px;
+  box-shadow:0 10px 30px rgba(2,6,23,0.04);
+  cursor:pointer;
+  transition:transform .12s
+}
+.kpi:hover{transform:translateY(-4px)}
+.kpi.big{
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));
+  color:#fff
+}
+.kpi-label{font-size:12px;color:var(--muted)}
+.kpi-value{font-size:20px;font-weight:700;margin-top:6px}
+.kpi-sub{font-size:12px;color:rgba(255,255,255,0.9);margin-top:6px}
+
+/* filterbar */
+.ms-filterbar{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  margin-bottom:14px
+}
+.ms-search{
+  padding:10px 12px;
+  border-radius:10px;
+  border:1px solid #dbeafe;
+  flex:1;
+  max-width:520px;
+  background:#ffffff;
+}
+.ms-filter-chips{display:flex;gap:8px}
+.chip{
+  padding:8px 10px;
+  border-radius:8px;
+  border:1px solid transparent;
+  background:#ffffff;
+  cursor:pointer;
+  color:#1e293b;
+}
+.chip.active{
+  background:linear-gradient(90deg,#e0f2fe,#eef2ff);
+  border-color:#bfdbfe;
+}
+
+/* grid */
+.ms-grid{
+  display:grid;
+  grid-template-columns:1fr 320px;
+  gap:16px
+}
+
+/* card */
+.card{
+  background:var(--card);
+  border-radius:12px;
+  padding:14px;
+  box-shadow:0 10px 30px rgba(2,6,23,0.04);
+  border:1px solid #e2e8f0
+}
+.card-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.card-title{font-weight:700}
+.card-sub{font-size:12px;color:var(--muted);margin-top:2px}
+
+/* chart */
+.chart-wrap{
+  height:260px;
+  border-radius:8px;
+  background:linear-gradient(180deg,rgba(37,99,235,0.06),transparent);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:8px
+}
+.chart-svg{width:100%;height:100%}
+.mini-stats{display:flex;gap:12px;margin-top:12px}
+.stat{
+  flex:1;
+  background:#eff6ff;
+  padding:10px;
+  border-radius:8px;
+  text-align:center
+}
+.stat-label{font-size:12px;color:var(--muted)}
+.stat-value{font-weight:700;margin-top:6px}
+
+/* tasks */
+.tasks-card .card-title{margin-bottom:10px}
+.task-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #e2e8f0;
+  margin-bottom:10px;
+  cursor:pointer;
+  background:#ffffff;
+}
+.task-title{
+  font-weight:700;
+  color:#0f172a;              /* dark so clearly visible */
+}
+.task-meta{
+  font-size:12px;
+  color:var(--muted);
+  margin-top:6px
+}
+.task-right{display:flex;align-items:center;gap:8px}
+.progress-small{
+  width:140px;
+  height:8px;
+  background:#e5edff;
+  border-radius:8px;
+  overflow:hidden
+}
+.progress-fill{
+  height:100%;
+  background:linear-gradient(90deg,var(--accent),var(--accent-2))
+}
+
+/* side */
+.ms-side{display:flex;flex-direction:column;gap:12px}
+.region{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 0;
+  cursor:pointer
+}
+.region-name{width:120px;font-size:13px;color:#0f172a}
+.region-bar{
+  flex:1;
+  height:8px;
+  background:#dbeafe;
+  border-radius:8px;
+  overflow:hidden
+}
+.region-fill{
+  height:100%;
+  background:linear-gradient(90deg,var(--accent),var(--accent-2))
+}
+.region-val{
+  width:36px;
+  text-align:right;
+  font-weight:600;
+  color:#1f2937
+}
+
+/* pie + legend */
+.pie-legend{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:8px
+}
+.legend{display:flex;flex-direction:column;gap:6px}
+.dot{
+  width:10px;
+  height:10px;
+  border-radius:999px;
+  display:inline-block
+}
+.dot.high{background:#ef4444}
+.dot.med{background:#f59e0b}
+.dot.low{background:#10b981}
+
+/* activity */
+.activity-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  gap:8px
+}
+.activity-list li{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:8px;
+  border-radius:8px;
+  border:1px solid #e2e8f0;
+  cursor:pointer;
+  background:#ffffff;
+}
+
+/* side panel */
+.side-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(15,23,42,0.22);
+  display:flex;
+  justify-content:flex-end;
+  z-index:80
+}
+.side-panel{
+  width:420px;
+  background:var(--card);
+  height:100%;
+  padding:16px;
+  box-shadow:-8px 0 60px rgba(15,23,42,0.18);
+  overflow:auto
+}
+.side-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.btn-close{background:none;border:none;font-size:18px;cursor:pointer}
+
+/* responsive */
+@media (max-width: 980px){
+  .ms-grid{grid-template-columns:1fr}
+  .ms-kpis{grid-template-columns:1fr 1fr;gap:10px}
+  .side-panel{width:100%}
+}
+
+
+/* Force dark text everywhere that was appearing light */
+.card-title,
+.card-sub,
+.ms-sub,
+.muted,
+.task-meta,
+.region-name,
+.region-val,
+.activity-list li,
+.activity-list li span,
+.stat-label,
+.stat-value {
+  color: #0f172a !important;   /* deep dark gray */
+}
+
+/* Specifically fixing Recent Activity (your screenshot) */
+.activity-list li .muted,
+.activity-list li small {
+  color: #334155 !important;
+}
+
+/* Fix KPI subtitles (Pending 31, Current/Overdue, Available) */
+.kpi-sub,
+.ms-kpis .kpi .kpi-sub {
+  color: #475569 !important;
+}
+
+
+/* Fix: Buttons text should be white */
+.ms-actions .btn-primary,
+.ms-actions .btn-primary * {
+  color: #ffffff !important;
+}
+
+.ms-actions .btn-ghost,
+.ms-actions .btn-ghost * {
+  color: #ffffff !important;
+}

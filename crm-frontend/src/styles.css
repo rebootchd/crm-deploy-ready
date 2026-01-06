@@ -1,0 +1,277 @@
+/* -----------------------
+   Base & Theme variables
+   ----------------------- */
+:root{
+  --bg: #f3f6fb;
+  --card: #ffffff;
+  --accent: #1e3a8a;
+  --muted: #6b7280;
+  --shadow: 0 6px 18px rgba(17,24,39,0.06);
+  --dot-red: #ef4444;
+  --dot-yellow: #facc15;
+  --dot-green: #22c55e;
+}
+
+/* Basic resets */
+*{box-sizing:border-box;font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+body,html,#root{height:100%;margin:0;background:var(--bg);}
+
+/* App shell */
+.app-shell{display:flex;min-height:100vh;}
+.sidebar{
+  width:240px;background:var(--accent);color:white;padding:18px;display:flex;flex-direction:column;justify-content:space-between;
+  transition:width .18s ease;
+}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-circle{width:44px;height:44px;border-radius:8px;background:rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;font-weight:700}
+.logo-text{font-size:18px;font-weight:700}
+.collapse-btn{background:transparent;border:none;color:white;cursor:pointer;margin-top:8px}
+
+.nav{margin-top:20px;display:flex;flex-direction:column;gap:8px}
+.nav-item{display:flex;align-items:center;gap:12px;padding:10px;border-radius:8px;background:transparent;border:none;color:white;cursor:pointer;text-align:left}
+.nav-item:hover{background:rgba(255,255,255,0.04)}
+.nav-icon{width:28px}
+.sidebar-bottom{display:flex;flex-direction:column;gap:8px}
+.logout{background:rgba(255,255,255,0.06);border:none;padding:8px;border-radius:8px;color:white;cursor:pointer}
+
+/* main area */
+.main-area{flex:1;display:flex;flex-direction:column}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;background:transparent}
+.page-title{margin:0;text-transform:capitalize}
+.top-right{display:flex;gap:12px;align-items:center}
+.notif{position:relative}
+.notif-count{background:#ef4444;color:white;padding:2px 6px;border-radius:999px;margin-left:6px;font-size:12px}
+
+/* content */
+.content-area{padding:18px}
+
+/* cards & grids */
+.card{background:var(--card);padding:16px;border-radius:12px;box-shadow:var(--shadow);margin-bottom:14px}
+.card.wide{display:flex;align-items:center;gap:12px}
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:14px}
+.card-head{display:flex;gap:12px;align-items:center}
+.card-icon{width:44px;height:44px;border-radius:8px;background:#eef2ff;display:flex;align-items:center;justify-content:center;font-size:18px}
+.card-body{display:flex;align-items:center;justify-content:space-between;margin-top:12px}
+.metric{font-size:28px;font-weight:700}
+/* =======================================
+   Modern "View Details" Button Styling
+   ======================================= */
+
+.btn {
+  background: linear-gradient(145deg, #2563eb, #1e3a8a);
+  color: white;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.35),
+              inset 0 1px 2px rgba(255, 255, 255, 0.25);
+  transition: all 0.25s ease;
+}
+
+/* Small variant (used in dashboard cards) */
+.btn.small {
+  padding: 8px 14px;
+  font-size: 13.5px;
+}
+
+/* Hover: lift, brighten, and glow */
+.btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(145deg, #3b82f6, #1e40af);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.45),
+              inset 0 1px 3px rgba(255, 255, 255, 0.3);
+  filter: brightness(1.1);
+}
+
+/* Active / pressed: subtle press-down effect */
+.btn:active {
+  transform: translateY(0);
+  background: linear-gradient(145deg, #1e40af, #1e3a8a);
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* Optional subtle pulse for demo presentation */
+@keyframes buttonPulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4); }
+  70% { box-shadow: 0 0 0 8px rgba(37, 99, 235, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+}
+.btn.pulse {
+  animation: buttonPulse 3s infinite;
+}
+
+.btn.ghost{background:transparent;border:1px solid #e6e9ef;color:#333}
+
+/* lower area */
+.dashboard-lower{display:grid;grid-template-columns:1fr 320px;gap:14px}
+.panel{background:var(--card);padding:12px;border-radius:12px;box-shadow:var(--shadow)}
+
+/* forms & tables */
+.form-row{display:flex;gap:10px;align-items:center}
+.form-row input, .form-row select{padding:8px;border-radius:8px;border:1px solid #e6e9ef}
+.table{width:100%;border-collapse:collapse;margin-top:10px}
+.table th, .table td{padding:8px;text-align:left;border-bottom:1px solid #eef2f6}
+.list{list-style:none;padding-left:0;margin:0}
+.muted{color:var(--muted);font-size:13px}
+
+/* progress */
+.progress{background:#f1f5f9;border-radius:8px;height:18px;overflow:hidden}
+.progress-inner{background:#3b82f6;height:100%;padding-left:8px;color:white;font-weight:600;font-size:12px;display:flex;align-items:center}
+
+/* grid helpers */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+/* calendar */
+.calendar-grid{display:flex;gap:10px;flex-wrap:wrap}
+.calendar-item{background:#f8fafc;border-radius:8px;padding:10px;min-width:160px;box-shadow:var(--shadow)}
+
+/* responsive */
+@media (max-width:900px){
+  .sidebar{position:fixed;z-index:40;left:0;top:0;bottom:0}
+  .main-area{margin-left:240px}
+  .dashboard-lower{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .cards-grid{grid-template-columns:repeat(1,1fr)}
+  .main-area{margin-left:70px}
+  .sidebar{width:70px}
+  .nav-label{display:none}
+}
+
+/* ============================
+   Dashboard status dots area
+   ============================ */
+.card-status {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 12px;
+  padding-top: 8px;
+  border-top: 1px solid #f0f2f5;
+}
+
+/* Each status item: dot + optional count */
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  outline: none;
+}
+
+/* Make clickable items obvious */
+.clickable { cursor: pointer; }
+.clickable:focus { box-shadow: 0 0 0 3px rgba(30,58,138,0.12); border-radius: 8px; }
+/* ===============================
+   Enhanced Status Buttons Styling
+   =============================== */
+
+.status-dot {
+  width: 22px;                       /* slightly bigger */
+  height: 22px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  transition: all 0.25s ease;
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.6),
+              0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* ----- Color Themes with Gradients ----- */
+.status-dot.red {
+  background: linear-gradient(145deg, #f87171, #dc2626);
+  box-shadow: 0 3px 6px rgba(239, 68, 68, 0.5);
+}
+
+.status-dot.yellow {
+  background: linear-gradient(145deg, #fde047, #facc15);
+  box-shadow: 0 3px 6px rgba(250, 204, 21, 0.45);
+}
+
+.status-dot.green {
+  background: linear-gradient(145deg, #4ade80, #16a34a);
+  box-shadow: 0 3px 6px rgba(34, 197, 94, 0.45);
+}
+
+/* ----- Hover Glow + Lift effect ----- */
+.status-item:hover .status-dot {
+  transform: scale(1.25);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  filter: brightness(1.05);
+}
+
+/* ----- Subtle Pulse Animation (for active look) ----- */
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.3); }
+  70% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+.status-dot.green {
+  animation: pulseGlow 2s infinite;
+}
+
+/* Keep click accessibility */
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.status-count {
+  font-size: 14px;
+  color: #111827;
+  background: rgba(0,0,0,0.05);
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+
+/* Modal styles (simple) */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(4,8,15,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 500;
+  padding: 20px;
+}
+
+.modal {
+  width: 720px;
+  max-width: calc(100% - 40px);
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 14px;
+  max-height: 80vh;
+  overflow: auto;
+}
+
+.modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.modal-close {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.modal-body { padding-top: 8px; padding-bottom: 8px; }
+.modal-footer { display:flex;justify-content:flex-end;gap:8px;padding-top:8px }
+
+/* Accessibility helper: make focus visible for keyboard users */
+:focus { outline: none; }
+:focus-visible { outline: 2px solid rgba(30,58,138,0.18); outline-offset: 2px; }

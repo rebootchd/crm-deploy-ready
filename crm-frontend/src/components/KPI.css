@@ -1,0 +1,62 @@
+/* KPI shared vars (dark neon palette) */
+:root{
+  --deep-bg:#141229;
+  --card-dark:#1b1530;
+  --accent-purple:#7c3aed;
+  --accent-blue:#06b6d4;
+  --muted:#9aa3b2;
+  --light:#e6eaf2;
+}
+
+/* Card base */
+.kpi-card{
+  border-radius:12px;
+  padding:12px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  cursor:default;
+}
+
+/* DEFAULT KPI style (light-friendly; you can reuse existing styles) */
+.kpi-card.default{
+  background: linear-gradient(180deg, rgba(255,255,255,0.98), #ffffff);
+  box-shadow: 0 8px 20px rgba(2,6,23,0.04);
+  color: #0f172a;
+  min-width:140px;
+  min-height:72px;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+.kpi-top{ font-size:13px; color:var(--muted); }
+.kpi-main{ font-size:20px; font-weight:700; color:#0b1220; }
+.kpi-sub{ font-size:12px; color:var(--muted); }
+
+/* NEON variant (dark card) */
+.kpi-card.neon{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  color: var(--light);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  box-shadow: 0 14px 40px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+  min-width:300px;
+  padding:14px;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.kpi-card.neon:hover{ transform: translateY(-4px); box-shadow: 0 22px 46px rgba(2,6,23,0.72); }
+
+/* inner layout */
+.neon-inner{ display:flex; align-items:center; gap:12px; width:100%; justify-content:space-between; }
+.neon-left{ display:flex; flex-direction:column; gap:6px; min-width:130px; }
+.neon-title{ font-size:13px; color:var(--muted); }
+.neon-value{ font-size:20px; font-weight:800; color: #fff; text-shadow: 0 6px 24px rgba(124,58,237,0.12); }
+.neon-sub{ font-size:12px; color:#8ef08e; font-weight:600; }
+
+/* chart area */
+.neon-chart{ width:120px; height:120px; display:flex; align-items:center; justify-content:center; }
+
+/* small responsive tweak */
+@media (max-width:900px){
+  .kpi-card.neon{ min-width:220px; padding:10px; }
+  .neon-chart{ width:96px; height:96px; }
+}

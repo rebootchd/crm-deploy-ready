@@ -1,0 +1,26 @@
+.clients-container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.clients-container h2 {
+  margin-bottom: 15px;
+}
+
+.clients-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.clients-container th,
+.clients-container td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.clients-container th {
+  background: #f3f4f6;
+}

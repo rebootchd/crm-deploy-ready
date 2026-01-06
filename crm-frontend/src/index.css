@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* ===== Mobile Friendly Base ===== */
+
+/* 1. Screen overflow roko */
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* 2. Tables mobile pe scrollable */
+table {
+  width: 100%;
+  display: block;
+  overflow-x: auto;
+}
+
+/* 3. Inputs & buttons mobile size */
+input, select, textarea, button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 4. Small screen ke liye */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  h1, h2, h3 {
+    font-size: 18px;
+  }
+}
+
+
